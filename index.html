@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Eye Icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <title>Food Store</title>
+</head>
+
+<body>
+        <!--Navbar MAking-->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+
+        <div class="container">
+            <a class="navbar-brand" href="#organic">Welcome</a>
+
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-hamburger" style="font-size: 24px; color: black;"></i>
+                </span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav m-auto my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#trending">TRENDING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#organic">ORGANIC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#store">STORE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="px-2 search" type="search" placeholder="SEARCH" aria-label="Search">
+                    <button class="btn0" type="submit">Search</button>
+                </form>
+
+                <!-- Sign In Icon -->
+                <button class="btn btn-outline-success ms-5" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <i class="fas fa-user"></i> Sign In
+                </button>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sign In Modal -->
+   
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <form id="loginForm" novalidate>
+                    <div class="modal-body">
+                        <!-- First Name -->
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label" >First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required>
+                            <div class="invalid-feedback">Only alphabets allowed.</div>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" required>
+                            <div class="invalid-feedback">Only alphabets allowed.</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="Enter Email" required>
+                        </div>
+
+                        <!-- Password with toggle -->
+                        <div class="mb-3">
+                            <label for="passwordInput" class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="passwordInput" placeholder="Enter Password">
+                                <span class="input-group-text" id="togglePassword" style="cursor: pointer;">
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="invalid-feedback">Minimum 6 characters and one special character required.</div>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="mb-3">
+                            <label for="confirmPasswordInput" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Confirm Password" required>
+                            <div class="invalid-feedback">Passwords do not match.</div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success w-100">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="home" class="main">
+        <div class="container py-7">
+            <div class="row py-5">
+                <div class="col-lg-7 pt-5 ">
+                    <h1 class="pt-5 typing-text">Nature Has Always Cared For Us !</h1>
+                    <button class="btn1 mt-3">More Tips</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="new">
+        <div class="container py-5">
+            <div class="row pt-5">
+                <div class="col-lg-7 m-auto">
+                    <div class="row text-center">
+                        <div class="col-lg-4">
+                            <img src="./img/mango.png" class="img-fluid" alt="">
+                            <h6>NATURAL</h6>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="./img/grapes.png" class="img-fluid" alt="">
+                            <h6>ORGANIC</h6>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <img src="./img/fruits_13352503.png" class="img-fluid" alt="">
+                            <h6>HEALTH</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--What"s Trending-->
+
+    <section id="trending" class="product">
+        <div class="container py-5">
+            <div class="row py-5 ">
+                <div class="col-lg-5 m-auto text-center">
+                    <h1>What's Trending</h1>
+                    <h6 style="color:rgb(174, 9, 9)">Be Healthy Organic Food</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/BananaChips.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="banana chips">Banana Chips – Crunchy & Healthy</h6>
+
+                    <p>Price: <del>₹20</del> ₹17</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/milk.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="fresh cow milk">Fresh Cow Milk – Pure & Organic</h6>
+                    <p>Price: <del>₹85</del> ₹65</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/Rice.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="basmati rice">Premium Basmati Rice – Long Grain</h6>
+                    <p>Price: <del>₹599</del> ₹465</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/Yummiez-Green-Peas.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Green peas">Yummiez Green Peas – Frozen Delight</h6>
+                    <p>Price: <del>₹199</del> ₹149</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 text-center m-auto">
+                    <button class="btn1">Click For More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Welcome To Our Organic Food Society-->
+
+    <section id="organic" class="about">
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="col-lg-8 m-auto text-center">
+                    <h1>Welcome To Our Organic Food Society</h1>
+                    <h6 style="color:red">Be Healthy Organic Food</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center">
+                    <div class="img-wrapper mx-auto mb-3">
+                        <img src="./img/salad.avif" class="feature-img" alt="Fresh Product">
+                    </div>
+                    <h5>Fresh & Natural Ingredients</h5>
+                    <p>Experience the purity of farm-fresh produce handpicked to bring nature’s best to your table.</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="img-wrapper mx-auto mb-3">
+                        <img src="./img/delicious.jpg" class="feature-img" alt="Delicious Food">
+                    </div>
+                    <h5>Delicious Every Bite</h5>
+                    <p>Our products are crafted to please your taste buds with unmatched flavor and satisfying crunch.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="img-wrapper mx-auto mb-3">
+                        <img src="./img/sweat.jpg" class="feature-img" alt="Sweet Treats">
+                    </div>
+                    <h5>Satisfy Your Sweet Tooth</h5>
+                    <p>Indulge in our collection of perfectly sweet delights that melt in your mouth with joy.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 text-center m-auto">
+                    <button class="btn1">Shop More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Explore our Store-->
+    <section id="store" class="shop">
+        <div class="container">
+            <div class="col-lg-8 m-auto text-center">
+                <h1>Explore Our Store</h1>
+                <h6 style="color:red">Pick Your Product From Our Store</h6>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/arhar dal.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Arhar Dal">Arhar Dal – Rich in Protein</h6>
+                    <p>Price: <del>₹175</del> ₹160</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/masoorDal.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Masoor Dal">Masoor Dal – High in Iron</h6>
+                    <p>Price: <del>120</del> ₹110</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/Moond Dal.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Moong Dal">Moong Dal – Light & Nutritious</h6>
+                    <p>Price: <del>115</del> ₹100</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/Urad Daal.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Urad dal">Urad Dal – Perfect for Dosa</h6>
+                    <p>Price: <del>₹180</del> ₹140</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/fortuneOil.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Fortune Oil">Fortune Sunflower Oil – Lite & Healthy</h6>
+                    <p>Price: <del>₹195</del> ₹175</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/mustardOil.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Mustard Oil">Mustard Oil – Strong & Aromatic</h6>
+                    <p>Price: <del>₹299</del> ₹210</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/Fortune-Chakki-Fresh-Atta.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Chakki Atta">Chakki Fresh Atta – Soft & Wholesome</h6>
+                    <p>Price: <del>₹599</del> ₹460</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/maida.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Refined Maida">Refined Maida – Superfine Baking Flour</h6>
+                    <p>Price: <del>₹99</del> ₹79</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/cofee.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Cold Coffee">Instant Coffee – Bold & Rich</h6>
+                    <p>Price: <del>₹111</del> ₹99</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/museli.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="museli">Muesli – High Fiber Breakfast</h6>
+                    <p>Price: <del>₹699</del> ₹499</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/chai.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Masala Chai">Masala Chai – Authentic Indian Taste</h6>
+                    <p>Price: <del>₹699</del> ₹499</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/popcorn.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <h6 class="product-name" data-name="Popcorn">Butter Popcorn – Ready to Eat Snack</h6>
+                    <p>Price: <del>₹99</del> ₹89</p>
+                </div>
+            </div>
+            <div id="custom-alert" class="custom-alert">
+                <span class="close-alert">&times;</span>
+                <p>❌ Sorry! This product is currently out of stock.<br>Try Our Other Products</p>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="apple">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="font-weight-bold py-3">Unlock Your Potential With Good Nutrition</h1>
+                    <h6>Pick Your Product From Our Store</h6>
+                    <button class="btn1 mt-3">More From Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 m-auto text-center">
+                    <h1>Contact Us</h1>
+                    <h6 style="color:red">Always Be In Touch With Us</h6>
+                </div>
+            </div>
+
+            <div class="row py-5">
+                <div class="col-lg-9 m-auto">
+                    <div class="row text-center">
+                        <div class="col-lg-4 mb-4">
+                            <h6>LOCATION</h6>
+                            <p>Bettiah, Bihar 845438</p>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <h6>PHONE</h6>
+                            <p>+918707400000</p>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <h6>EMAIL</h6>
+                            <p>foodstore@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 mb-3">
+                            <input type="text" class="form-control bg-light" placeholder="First Name">
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <input type="text" class="form-control bg-light" placeholder="Last Name">
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <textarea class="form-control bg-light" rows="5" placeholder="Enter Message"></textarea>
+                        </div>
+                        <div class="col-lg-12">
+                            <button class="btn1">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-9 m-auto text-center">
+                    <h1>Join Our Society</h1>
+                    <form class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-4 gap-3">
+                        <input type="text" class="form-control news-input" placeholder="Enter Your Email ID">
+                        <button class="btn2" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <section class="footer-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-11">
+                        <div class="row text-center">
+                            <div class="col-lg-3 py-3">
+                                <h5 class="pb-3">Customer Care</h5>
+                                <p>Regular</p>
+                                <p>On Time</p>
+                                <p>Always Care</p>
+                            </div>
+                            <div class="col-lg-3 py-3">
+                                <h5 class="pb-3">Our Services</h5>
+                                <p>Fresh Food</p>
+                                <p>Quick Delivery</p>
+                                <p>Secure Payment</p>
+                            </div>
+                            <div class="col-lg-3 py-3">
+                                <h5 class="pb-3">Information</h5>
+                                <p>About Us</p>
+                                <p>Contact</p>
+                                <p>Terms & Conditions</p>
+                            </div>
+                            <div class="col-lg-3 py-3">
+                                <h5 class="pb-3">Follow Us</h5>
+                                <span class="px-2"><i class="fab fa-facebook fa-lg"></i></span>
+                                <span class="px-2"><i class="fab fa-instagram fa-lg"></i></span>
+                                <span class="px-2"><i class="fab fa-twitter fa-lg"></i></span>
+                                <span class="px-2"><i class="fab fa-google-plus fa-lg"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <footer class="custom-footer">
+                    <p class="mb-0">&copy; 2025 Organic Food Web. All Rights Reserved. Developed By Ranjeet Kushwaha</p>
+                </footer>
+
+
+            </div>
+        </section>
+
+        <!--to make anchor smooth-->
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+        <!--Search Bar javascript-->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const searchInput = document.querySelector(".search");
+                const searchForm = document.querySelector("form.d-flex");
+                const customAlert = document.getElementById("custom-alert");
+                const closeAlertBtn = document.querySelector(".close-alert");
+
+                searchForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const query = searchInput.value.toLowerCase().trim();
+                    const products = document.querySelectorAll(".product-name");
+
+                    let matchFound = false;
+                    let firstMatchCard = null;
+
+                    products.forEach((product) => {
+                        const name = product.getAttribute("data-name").toLowerCase();
+                        const card = product.closest(".col-lg-3");
+
+                        if (name.includes(query)) {
+                            card.style.display = "block";
+                            if (!matchFound) {
+                                firstMatchCard = card; // Save the first match
+                            }
+                            matchFound = true;
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+
+                    if (!matchFound) {
+                        customAlert.style.display = "block";
+                        setTimeout(() => {
+                            customAlert.style.display = "none";
+                        }, 4000);
+                    } else if (firstMatchCard) {
+                        firstMatchCard.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }
+                });
+
+                // Manual close for alert box
+                closeAlertBtn.addEventListener("click", function () {
+                    customAlert.style.display = "none";
+                });
+            });
+        </script>
+
+
+        <!--Sign in-->
+
+        <!-- Your custom login form handler -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginForm = document.getElementById("loginForm");
+
+                loginForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const email = document.getElementById("emailInput").value.trim();
+                    const password = document.getElementById("passwordInput").value.trim();
+
+                    if (email && password) {
+                        alert("✅ Login successful! Welcome to the website.");
+                        const loginModal = bootstrap.Modal.getInstance(document.getElementById("loginModal"));
+                        loginModal.hide();
+                    } else {
+                        alert("❌ Please enter a valid email and password.");
+                    }
+                });
+            });
+        </script>
+
+        <!--Validation Script-->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const firstName = document.getElementById("firstName");
+                const lastName = document.getElementById("lastName");
+                const password = document.getElementById("passwordInput");
+                const confirmPassword = document.getElementById("confirmPasswordInput");
+                const loginForm = document.getElementById("loginForm");
+                const togglePassword = document.getElementById("togglePassword");
+                const toggleIcon = togglePassword.querySelector("i");
+
+                function validateName(input) {
+                    const regex = /^[A-Za-z]+$/;
+                    if (regex.test(input.value.trim())) {
+                        input.classList.remove("is-invalid");
+                        input.classList.add("is-valid");
+                        return true;
+                    } else {
+                        input.classList.add("is-invalid");
+                        input.classList.remove("is-valid");
+                        return false;
+                    }
+                }
+
+                function validatePassword(input) {
+                    const regex = /^(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,}$/;
+                    if (regex.test(input.value)) {
+                        input.classList.remove("is-invalid");
+                        input.classList.add("is-valid");
+                        return true;
+                    } else {
+                        input.classList.add("is-invalid");
+                        input.classList.remove("is-valid");
+                        return false;
+                    }
+                }
+
+                function validateConfirmPassword() {
+                    if (password.value === confirmPassword.value && confirmPassword.value !== "") {
+                        confirmPassword.classList.remove("is-invalid");
+                        confirmPassword.classList.add("is-valid");
+                        return true;
+                    } else {
+                        confirmPassword.classList.add("is-invalid");
+                        confirmPassword.classList.remove("is-valid");
+                        return false;
+                    }
+                }
+
+                // Show/Hide password
+                togglePassword.addEventListener("click", function () {
+                    const type = password.getAttribute("type") === "password" ? "text" : "password";
+                    password.setAttribute("type", type);
+                    toggleIcon.classList.toggle("fa-eye");
+                    toggleIcon.classList.toggle("fa-eye-slash");
+                });
+
+                // Real-time validation
+                [firstName, lastName].forEach(input => {
+                    input.addEventListener("input", () => validateName(input));
+                });
+
+                password.addEventListener("input", () => {
+                    validatePassword(password);
+                    validateConfirmPassword();
+                });
+
+                confirmPassword.addEventListener("input", validateConfirmPassword);
+
+                // Prevent form submit if any field is invalid
+                loginForm.addEventListener("submit", function (e) {
+                    const validFirstName = validateName(firstName);
+                    const validLastName = validateName(lastName);
+                    const validPassword = validatePassword(password);
+                    const validConfirm = validateConfirmPassword();
+
+                    if (!validFirstName || !validLastName || !validPassword || !validConfirm) {
+                        e.preventDefault();
+                    }
+                });
+            });
+        </script>
+
+
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <!-- Bootstrap 5 JS Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+05sEZG3k5GAc19xYY3u+Od6LyoaO"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

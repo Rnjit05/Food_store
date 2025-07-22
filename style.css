@@ -1,0 +1,311 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  inline-size: 0%;
+  block-size: 2px;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  background-color: green; /* You can change the color */
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: green; /* Change the text color on hover */
+}
+
+.navbar-nav .nav-link:hover::after {
+  inline-size: 100%;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    color:black;
+    font-family: 'Lobster',cursive;
+}
+
+.navbar-brand:hover{
+    color:black;
+}
+
+.nav-link{
+    margin-inline-end: 10px;
+    margin-inline-start: 10px;
+    color:black;
+    text-transform:uppercase;
+    font-family: 'Rubik',sans-serif;
+}
+
+.nav-link:hover{
+    color:black;
+
+}
+
+.search{
+    block-size:40px;
+    inline-size:80%;
+    border-radius:60px;
+    outline: none;
+    margin-inline-end:-35px;
+    border: 2px solid rgb(248,26,92);
+    margin-inline-start:35px;
+}
+
+.btn0{
+    block-size:40px;
+    inline-size:40%;
+    border-radius:60px;
+    outline: none;
+    border: none;
+    background:rgb(248,26,92);
+    color:white;
+    font-weight:700;
+}
+
+.main{
+    background:url(./img/Background2.jpg)no-repeat;
+    background-size: cover;
+    block-size:100vh;
+    background-position: 50% 50%;
+    inline-size: 100%;
+
+}
+
+.main h1{
+font-size: 4rem;
+font-weight: 700;
+/* font-family:'robot' */
+}
+
+.btn1{
+    block-size: 45px;
+    inline-size: 35%;
+    border:none;
+    outline:none;
+    background:rgb(248,26,92);
+    color:white;
+    font-weight: 700;
+    border-radius: 60px;
+}
+
+.btn1:hover{
+    background-color:rgb(223,15,77);
+    transition: 0.5s;
+}
+
+.new img {
+    inline-size: 80px;       /* Set fixed width */
+    block-size: 80px;      /* Set fixed height */
+    object-fit: contain; /* Keeps aspect ratio inside box */
+    margin-block-end: 10px;
+    transition: transform 0.3s ease; /* Optional hover effect */
+  }
+  
+  .new img:hover {
+    transform: scale(1.4); /* Slight zoom on hover */
+  }
+  
+  h1{
+    font: weight 700px;;
+  }
+ 
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body img {
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .card-body img {
+    transform: scale(1.1);
+  }
+  
+  .card + h6,
+  .card + h6 + p {
+    transition: color 0.3s ease;
+  }
+  
+  .card:hover + h6 {
+    color: #28a745; /* Green shade for energy food */
+    font-weight: bold;
+  }
+  
+  .card:hover + h6 + p {
+    color: #ff5722; /* Nice contrast orange for price */
+    font-weight: bold;
+  }
+
+
+  .feature-img {
+    inline-size: 180px;
+    block-size: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  .feature-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  h5 {
+    margin-block-start: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  p {
+    color: #555;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  
+
+  .apple{
+    background: url(./img/appppple.avif)no-repeat;
+    background-size: cover;
+    block-size: 90vh;
+    inline-size: 100%;  
+  }
+
+  @media (max-inline-size: 768px) {
+    .apple {
+      block-size: auto;
+      padding: 60px 20px;
+      /* text-align: center; */
+    }
+  
+    .apple h1 {
+      font-size: 2rem;
+    }
+
+
+.contact input,
+.contact textarea {
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-weight: 500;
+}
+
+  }
+  
+
+   .news-input {
+    block-size: 45px;
+    inline-size: 100%;
+    max-inline-size: 400px;
+    border: 2px solid white;
+    outline: none;
+    background: black;
+    color: white;
+    padding: 0 15px;
+    font-weight: 600;
+  }
+  
+  .news-input::placeholder {
+    color: white;
+  }
+  
+  .btn2 {
+    block-size: 45px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .btn2:hover {
+    background-color:black;
+    transform: scale(1.05);
+  }
+  
+  
+  .news-form {
+    gap: 10px;
+  }
+  
+  .news p{
+    margin: 0;
+  }
+
+  .custom-footer {
+    background-color: #111;       /* Dark background */
+    color: #fff;                  /* White text */
+    text-align: center;           /* Center the text */
+    padding: 20px 0;              /* Top & bottom spacing */
+    font-size: 16px;              /* Readable text size */
+    margin-block-start: 50px;             /* Space from content above */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+  }
+  
+  .custom-footer p {
+    margin: 0;                    /* Remove default paragraph margin */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+
+
+  .fab{
+  font-size:2.5rem;
+  cursor:pointer;
+  padding-inline-end:5px
+ }
+
+ /* customize aler box */
+
+ .custom-alert {
+  display: none;
+  position: fixed;
+  inset-block-start: 30px;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  background-color:white;
+  color:red;
+  padding: 16px 24px;
+  border-radius: 8px;
+  z-index: 10000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  text-align: center;
+  min-inline-size: 300px;
+  max-inline-size: 90%;
+}
+
+.custom-alert .close-alert {
+  position: absolute;
+  inset-inline-end: 10px;
+  inset-block-start: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
